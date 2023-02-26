@@ -5,7 +5,7 @@ import snowflake.connector
 
 s3 = boto3.resource('s3')
 bucket = "electionuploads104030-dev" 
-df =  pd.read_csv('presidentialPdf3.csv')
+df =  pd.read_csv('presidentialPdf16k.csv')
 from pdf2image import convert_from_path
 import urllib.request
 import shutil
