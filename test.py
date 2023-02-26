@@ -312,7 +312,9 @@ for index, row in df.iterrows():
         table_name = "PU_RESULT_TABLE"
         final_query = f"Update {table_name} SET {part},{numberquery},status='collated' where pu_code={pu_code}"
         sql = f"""Update PU_RESULT_TABLE SET file='{image_name}' Where pu_code={pu_code}"""
-
+        print("fianlquery",final_query)
+        print('#############')
+        print(sql)
         with get_db2() as conn:
             cur = conn.cursor()
             try:
